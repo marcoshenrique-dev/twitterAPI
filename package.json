@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme",
   "dependencies": {
-    "eslint": "^7.10.0",
     "git-commit-msg-linter": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
