@@ -19,12 +19,13 @@
   "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "pg": "^8.3.3"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "git-commit-msg-linter": "^3.0.0"
+    "git-commit-msg-linter": "^3.0.0",
+    "nodemon": "^2.0.4"
   }
 }
