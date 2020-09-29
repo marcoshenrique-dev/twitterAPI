@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "git-commit-msg-linter": "^3.0.0"
   },
   "devDependencies": {
