@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/marcoshenrique-dev/twitterAPI/issues"
   },
-  "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme"
+  "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme",
+  "dependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
