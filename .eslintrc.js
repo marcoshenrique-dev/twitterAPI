@@ -13,5 +13,6 @@ module.exports = {
   rules: {
     'consistent-return': 'off',
     'class-methods-use-this': 'off',
+    camelcase: 'off',
   },
 };
