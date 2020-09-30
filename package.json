@@ -20,6 +20,7 @@
   "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^8.3.3"
   },
   "devDependencies": {
@@ -29,5 +30,4 @@
     "git-commit-msg-linter": "^3.0.0",
     "nodemon": "^2.0.4"
   }
-
 }
