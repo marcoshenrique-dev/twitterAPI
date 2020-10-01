@@ -1,12 +1,24 @@
 const UserRepository = require('../repositories/UserRepository');
 
 class UserController {
-  index(req, res) {
-
+  async index(req, res) {
+    try {
+      const result = await UserRepository.findAll();
+      res.status(200).send(result);
+    } catch {
+      res.status(400).send({ error: 'users not find' });
+    }
   }
 
-  show(req, res) {
-
+  async show(req, res) {
+    const { username } = req.params;
+    try {
+      const result = await UserRepository.findByUsername(username);
+      console.log(result);
+      res.status(200).send(result);
+    } catch (error) {
+      res.status(400).send({ error });
+    }
   }
 
   async store(req, res) {
@@ -21,17 +33,21 @@ class UserController {
 
     } = req.body;
 
-    const result = await UserRepository.create({
-      name,
-      username,
-      email,
-      password,
-      description,
-      banner_url,
-      profile_image,
-    });
+    try {
+      const result = await UserRepository.create({
+        name,
+        username,
+        email,
+        password,
+        description,
+        banner_url,
+        profile_image,
+      });
 
-    res.status(200).send(result);
+      res.status(200).send(result);
+    } catch {
+      res.status(400).send({ error: 'User not created' });
+    }
   }
 }
 
