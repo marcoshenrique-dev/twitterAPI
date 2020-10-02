@@ -2,12 +2,12 @@ const db = require('../../database/index');
 
 class UserRepository {
   async findAll() {
-    const row = await db.query('SELECT * FROM users');
+    const row = await db.query('SELECT email,id,name,username,description FROM users');
     return row;
   }
 
   async findByUsername(username) {
-    const [row] = await db.query(`SELECT * FROM users WHERE username='${username}'`);
+    const [row] = await db.query(`SELECT email,id,name,username,description FROM users WHERE username='${username}'`);
 
     return row;
   }
@@ -20,6 +20,11 @@ class UserRepository {
      `, [data.name, data.username, data.email, data.password, data.description,
       data.banner_url, data.profile_image]);
 
+    return row;
+  }
+
+  async login(email, password) {
+    const [row] = await db.query(`SELECT email,id FROM users WHERE email='${email}' AND password='${password}'`);
     return row;
   }
 }

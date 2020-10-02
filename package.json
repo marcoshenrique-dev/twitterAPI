@@ -20,6 +20,7 @@
   "homepage": "https://github.com/marcoshenrique-dev/twitterAPI#readme",
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.0.2",
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.3.3"

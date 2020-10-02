@@ -1,4 +1,6 @@
+const jwt = require('jsonwebtoken');
 const UserRepository = require('../repositories/UserRepository');
+const config = require('../../config');
 
 class UserController {
   async index(req, res) {
@@ -46,6 +48,25 @@ class UserController {
       res.status(200).send(result);
     } catch {
       res.status(400).send({ error: 'User not created' });
+    }
+  }
+
+  async login(req, res, next) {
+    const { email, password } = req.body;
+    try {
+      const result = await UserRepository.login(email, password);
+
+      if (result) {
+        const token = await jwt.sign({ email }, config.KEY, {
+          expiresIn: 86400,
+        });
+        result.token = token;
+      } else {
+        result = { error: 'user not found' };
+      }
+      res.status(200).send(result);
+    } catch (error) {
+      res.status(400).send({ error });
     }
   }
 }
