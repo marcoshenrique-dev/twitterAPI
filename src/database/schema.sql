@@ -20,6 +20,6 @@ CREATE TABLE users (
    image_url VARCHAR,
    likes INTEGER NOT NULL DEFAULT 0
    FOREIGN KEY(id_user) REFERENCES users(id),
-   
+
 
 );

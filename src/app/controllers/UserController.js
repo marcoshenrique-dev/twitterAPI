@@ -14,7 +14,6 @@ class UserController {
     const { username } = req.params;
     try {
       const result = await UserRepository.findByUsername(username);
-      console.log(result);
       res.status(200).send(result);
     } catch (error) {
       res.status(400).send({ error });
