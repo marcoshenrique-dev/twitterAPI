@@ -31,6 +31,8 @@
 ## About The Project
 
 ![cod2e](https://user-images.githubusercontent.com/51785898/94796371-128b1200-03b5-11eb-9cb7-a2ccfb2bfd2e.png)
+![Peek 2020-10-02 21-00](https://user-images.githubusercontent.com/51785898/94978241-e2498d80-04f2-11eb-9a45-0ba902a594f6.gif)
+![Peek 2020-10-02 20-56](https://user-images.githubusercontent.com/51785898/94978244-e4135100-04f2-11eb-8f8d-574bf71132ff.gif)
 
 
 These applications were made using several principles of the node, where I wanted to apply them to practice my knowledge in technology.
